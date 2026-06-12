@@ -1,0 +1,15 @@
+<!--
+Tujuan: Menetapkan theme window Android sebelum Compose dirender.
+Caller: AndroidManifest.
+Dependensi: Android platform theme dan colors.
+Main Functions: Theme.VocabInggris.
+Side Effects: Mengatur status bar dan navigation bar aplikasi.
+-->
+<resources>
+    <style name="Theme.VocabInggris" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+</resources>

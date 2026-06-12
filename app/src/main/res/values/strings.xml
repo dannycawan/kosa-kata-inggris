@@ -1,0 +1,10 @@
+<!--
+Tujuan: Menyimpan string resource identitas aplikasi.
+Caller: AndroidManifest dan resource Android.
+Dependensi: Android resource system.
+Main Functions: app_name.
+Side Effects: Menentukan label launcher aplikasi.
+-->
+<resources>
+    <string name="app_name">Kosa Kata Inggris</string>
+</resources>

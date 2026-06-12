@@ -1,0 +1,10 @@
+<!--
+Tujuan: Menyimpan warna resource dasar aplikasi.
+Caller: Launcher icon dan theme Android.
+Dependensi: Android resource system.
+Main Functions: launcher_background.
+Side Effects: Mengubah warna latar launcher icon.
+-->
+<resources>
+    <color name="launcher_background">#155EEF</color>
+</resources>
