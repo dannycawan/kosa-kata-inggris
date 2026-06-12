@@ -74,7 +74,7 @@ fun ListeningScreen(repository: VocabRepository, ttsManager: TtsManager) {
         }
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Button(
-                Modifier.weight(1f),
+                modifier = Modifier.weight(1f),
                 enabled = words.isNotEmpty(),
                 onClick = {
                     if (
@@ -90,15 +90,15 @@ fun ListeningScreen(repository: VocabRepository, ttsManager: TtsManager) {
             ) {
                 Text(if (playback.totalWords > 0) "Lanjut" else "Play")
             }
-            OutlinedButton(Modifier.weight(1f), onClick = manager::pause) {
+            OutlinedButton(onClick = manager::pause, modifier = Modifier.weight(1f)) {
                 Text("Pause")
             }
         }
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedButton(Modifier.weight(1f), onClick = manager::stop) {
+            OutlinedButton(onClick = manager::stop, modifier = Modifier.weight(1f)) {
                 Text("Stop")
             }
-            OutlinedButton(Modifier.weight(1f), onClick = manager::next) {
+            OutlinedButton(onClick = manager::next, modifier = Modifier.weight(1f)) {
                 Text("Next")
             }
         }

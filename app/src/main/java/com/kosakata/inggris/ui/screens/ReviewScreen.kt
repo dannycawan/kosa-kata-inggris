@@ -76,7 +76,7 @@ fun ReviewScreen(repository: VocabRepository, ttsManager: TtsManager) {
         }
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             OutlinedButton(
-                Modifier.weight(1f),
+                modifier = Modifier.weight(1f),
                 onClick = {
                     scope.launch {
                         repository.markSeen(word.id, false)
@@ -87,7 +87,7 @@ fun ReviewScreen(repository: VocabRepository, ttsManager: TtsManager) {
                 Text("Masih Sulit")
             }
             Button(
-                Modifier.weight(1f),
+                modifier = Modifier.weight(1f),
                 onClick = {
                     scope.launch {
                         repository.markSeen(word.id, true)
