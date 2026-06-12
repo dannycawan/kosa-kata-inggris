@@ -1,0 +1,39 @@
+{
+  "appName": "3000 Kosakata Inggris",
+  "packageName": "com.kosakata.inggris",
+  "version": "1.0.0",
+  "compileSdk": 36,
+  "targetSdk": 36,
+  "minSdk": 23,
+  "vocabularyCount": 3000,
+  "firstItem": {
+    "id": 1,
+    "word": "a, an",
+    "partOfSpeechRaw": "indefinite article A1",
+    "partOfSpeech": "article",
+    "level": "A1",
+    "meaningId": "sebuah; seorang",
+    "exampleEn": "I saw a bird and an apple.",
+    "exampleId": "Saya melihat seekor burung dan sebuah apel.",
+    "categories": [
+      "A1 Dasar"
+    ],
+    "isCore500": false
+  },
+  "lastItem": {
+    "id": 3000,
+    "word": "zone",
+    "partOfSpeechRaw": "n. B2",
+    "partOfSpeech": "noun",
+    "level": "B2",
+    "meaningId": "zona",
+    "exampleEn": "I learned about zone today.",
+    "exampleId": "Saya mempelajari tentang zona hari ini.",
+    "categories": [
+      "B2 Lanjutan",
+      "Nouns Only"
+    ],
+    "isCore500": false
+  },
+  "notes": "Starter v2. Data exists in app/src/main/assets/vocabulary_words.json. Do not use Oxford branding in public UI."
+}
