@@ -13,7 +13,8 @@ Side Effects: Diperbarui setiap milestone atau perubahan penting.
 # Current Status
 
 - **Completed** — Semua implementasi V2 UX selesai, error diperbaiki, build dan test lokal sukses.
-- Compile error `Icons.Default.Target` (tidak ada di Material Icons Extended) sudah diperbaiki menjadi `Icons.Default.GpsFixed` di `ProfileScreen.kt` dan `QuizResultScreen.kt`.
+- Perbaikan compile error `Icons.Default.Target` di ProfileScreen/QuizResultScreen selesai.
+- Perbaikan compile error `Column` scope di `SettingsScreen.kt` yang menggagalkan CI build sebelumnya sudah diperbaiki dan dipush (commit `9ff78d4`).
 
 # What Has Been Confirmed
 
@@ -35,6 +36,7 @@ Side Effects: Diperbarui setiap milestone atau perubahan penting.
 - Memperbaiki compile error `Icons.Default.Target` → `Icons.Default.GpsFixed` di:
   - `ProfileScreen.kt` (import dan 1 usage)
   - `QuizResultScreen.kt` (import dan 2 usages)
+- Memperbaiki compile error di `SettingsScreen.kt` dengan mengganti receiver `Column` menjadi `ColumnScope` dan memastikan import yang benar.
 - Menjalankan unit test: 4/4 PASSED (ReviewSchedulerTest 2, QuizGeneratorTest 2).
 - Build debug APK: `app-debug.apk` (7.9 MB) — sukses.
 - Build release AAB: `app-release.aab` (5.0 MB) — sukses.
@@ -64,6 +66,7 @@ Side Effects: Diperbarui setiap milestone atau perubahan penting.
 
 - `app/src/main/java/com/kosakata/inggris/ui/screens/ProfileScreen.kt` — fix Icons.Default.Target → GpsFixed
 - `app/src/main/java/com/kosakata/inggris/ui/screens/QuizResultScreen.kt` — fix Icons.Default.Target → GpsFixed
+- `app/src/main/java/com/kosakata/inggris/ui/screens/SettingsScreen.kt` — fix Column receiver menjadi ColumnScope
 - `DEV_PROGRESS.md` — update status ke Completed
 
 # Important Functions / Flows Touched
@@ -73,6 +76,7 @@ Side Effects: Diperbarui setiap milestone atau perubahan penting.
 # Decisions Made
 
 - `Icons.Default.Target` diganti `Icons.Default.GpsFixed` karena `Target` tidak tersedia di Material Icons Extended library.
+- Menggunakan `ColumnScope` di `SettingsScreen.kt` untuk perbaikan type inference lambda items pada `LazyRow`.
 - Tidak ada perubahan schema Room, logika bisnis, atau arsitektur.
 
 # Errors / Blockers
