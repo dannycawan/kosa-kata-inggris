@@ -44,13 +44,13 @@ fun QuizResultScreen(
         Spacer(Modifier.height(18.dp))
         BannerAdView(Modifier.fillMaxWidth().height(54.dp))
         Spacer(Modifier.height(18.dp))
-        Button(Modifier.fillMaxWidth(), onClick = onContinue) {
+        Button(onClick = onContinue, modifier = Modifier.fillMaxWidth()) {
             Text("Lanjut Belajar")
         }
-        OutlinedButton(Modifier.fillMaxWidth(), onClick = onReview) {
+        OutlinedButton(onClick = onReview, modifier = Modifier.fillMaxWidth()) {
             Text("Review Kata Sulit")
         }
-        OutlinedButton(Modifier.fillMaxWidth(), onClick = onHome) {
+        OutlinedButton(onClick = onHome, modifier = Modifier.fillMaxWidth()) {
             Text("Kembali ke Beranda")
         }
     }

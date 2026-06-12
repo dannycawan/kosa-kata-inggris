@@ -45,8 +45,12 @@ fun ProfileScreen(repository: VocabRepository, onBookmarks: () -> Unit, onSettin
                 Text("Kategori: $category")
             }
         }
-        Button(Modifier.fillMaxWidth(), onClick = onBookmarks) { Text("Kata Tersimpan") }
-        OutlinedButton(Modifier.fillMaxWidth(), onClick = onSettings) { Text("Pengaturan") }
+        Button(onClick = onBookmarks, modifier = Modifier.fillMaxWidth()) {
+            Text("Kata Tersimpan")
+        }
+        OutlinedButton(onClick = onSettings, modifier = Modifier.fillMaxWidth()) {
+            Text("Pengaturan")
+        }
         BannerAdView(Modifier.fillMaxWidth().height(54.dp))
     }
 }

@@ -74,7 +74,7 @@ fun SettingsScreen(repository: VocabRepository) {
             scope.launch { repository.preferences.setListeningDelay(it) }
         }
         OutlinedButton(
-            Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             onClick = { showResetDialog = true }
         ) {
             Text("Reset Progress Lokal")

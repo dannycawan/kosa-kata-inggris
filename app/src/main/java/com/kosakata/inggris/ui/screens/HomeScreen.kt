@@ -61,13 +61,13 @@ fun HomeScreen(
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("Target hari ini", fontWeight = FontWeight.Bold)
                 Text("$target kata baru atau review")
-                Button(Modifier.fillMaxWidth(), onClick = onStartLearn) {
+                Button(onClick = onStartLearn, modifier = Modifier.fillMaxWidth()) {
                     Text("Mulai Belajar")
                 }
-                OutlinedButton(Modifier.fillMaxWidth(), onClick = onListen) {
+                OutlinedButton(onClick = onListen, modifier = Modifier.fillMaxWidth()) {
                     Text("Dengarkan $target Kata Hari Ini")
                 }
-                OutlinedButton(Modifier.fillMaxWidth(), onClick = onReview) {
+                OutlinedButton(onClick = onReview, modifier = Modifier.fillMaxWidth()) {
                     Text("Review Kata Sulit")
                 }
             }
