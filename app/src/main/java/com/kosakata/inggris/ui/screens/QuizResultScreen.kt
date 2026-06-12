@@ -16,7 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.Target
+import androidx.compose.material.icons.filled.GpsFixed
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
@@ -53,7 +53,7 @@ fun QuizResultScreen(
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(22.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Icon(Icons.Default.Target, contentDescription = null)
+                    Icon(Icons.Default.GpsFixed, contentDescription = null)
                     Text("Skor $correct/$total", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
                 }
                 Text(message, color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -64,7 +64,7 @@ fun QuizResultScreen(
             StatCard(Icons.Default.Refresh, "Salah", wrong.toString(), Modifier.weight(1f))
         }
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            StatCard(Icons.Default.Target, "Akurasi", "$accuracy%", Modifier.weight(1f))
+            StatCard(Icons.Default.GpsFixed, "Akurasi", "$accuracy%", Modifier.weight(1f))
             StatCard(Icons.Default.Refresh, "Perlu review", wrong.toString(), Modifier.weight(1f))
         }
         Button(onClick = onContinue, modifier = Modifier.fillMaxWidth()) {

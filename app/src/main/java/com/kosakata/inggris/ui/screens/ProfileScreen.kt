@@ -20,7 +20,7 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Headphones
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Target
+import androidx.compose.material.icons.filled.GpsFixed
 import androidx.compose.material.icons.filled.TrendingUp
 import androidx.compose.material.icons.filled.Whatshot
 import androidx.compose.material3.Button
@@ -73,7 +73,7 @@ fun ProfileScreen(repository: VocabRepository, onBookmarks: () -> Unit, onSettin
         item {
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 StatCard(Icons.Default.Refresh, "Review queue", review.toString(), Modifier.weight(1f))
-                StatCard(Icons.Default.Target, "Daily goal", "$target kata", Modifier.weight(1f))
+                StatCard(Icons.Default.GpsFixed, "Daily goal", "$target kata", Modifier.weight(1f))
             }
         }
         item {
